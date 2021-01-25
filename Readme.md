@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Maxim Shleydovets](https://up.htmlacademy.ru/htmlcss/30/user/1512041).
-* Наставник: `Неизвестно`.
+* Наставник: [Наталья Рыжова] (https://htmlacademy.ru/profile/id418965).
 
 ---
 
