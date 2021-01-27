@@ -8,7 +8,10 @@
     <header>
         <section>
          <a href="index.html"><img src="img/index-logo.svg" width="220" height="47" alt="Логотип компании Техномарт"></a>
-         <label>Поиск:<input type="search"></label>
+         <form action="#">
+          <input type="search" name="search" placeholder="Поиск:"> 
+          <input type="submit" value="Найти">
+         </form>
          <a href="blank.html">Закладки</a>
          <a href="blank.html">Корзина</a>
          <a href="blank.html">Оформить заказ</a>
@@ -16,7 +19,7 @@
         <section>
           <p>Интернет магазин строительных материалов и инструментов для ремонта</p>
           <p><a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           <p>Равшан Джамшутович<a href="blank.html">Выйти</a></p>
           <a href="blank.html">Мои заказы</a>
           <a href="blank.html">Личный кабинет</a>
@@ -43,10 +46,11 @@
      <h1>Перфораторы</h1>
      <section>
         <h2>Фильтр товаров</h2>
-        <form method="get" action="https://echo.htmlacademy.ru">
+        <form method="get" action="https://echo.htmlacademy.ru" name="filter">
           <fieldset>
             <legend>Цена:</legend>
-            0<input type="range" name="priceinput" min="0" max="30000" step="500" value="25000" id="filter-price">30000
+            <input type="number" name="price" id="price" maxlength="5" min="0" max="40000" placeholder="0" step="100"> -
+            <input type="number" name="price" id="price" maxlength="5" min="0" max="40000" placeholder="30000" step="100">
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -75,8 +79,8 @@
          <li><a href="blank.html">По типу</a></li>
          <li><a href="blank.html">По функционалу</a></li>
        </ul>
-       <input type="button" value="Вверх">
-       <input type="button" value="Вниз">
+       <a href="#">Вверх</a>
+       <a href="#">Вниз</a>
       </section>
       <section>
        <h2>Список товаров</h2>  
@@ -153,8 +157,8 @@
       </ul>
       <aside>
        <h2>Пара слов о перфораторах</h2>
-       <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
+       <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </aside>
     </main>
@@ -162,8 +166,8 @@
         <section>
           <h2>Обзор страницы</h2>
           <a href="index.html"><img src="img/index-logo.svg" width="220" height="47" alt="Логотип компании Техномарт"></a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-             +7 (812) 555-05-55</p>
+          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           <nav>
            <ul>
             <li><a href="blank.html">Компания</a></li>
@@ -171,18 +175,15 @@
             <li><a href="blank.html">Новости</a></li>
             <li><a href="blank.html">Доставка</a></li>
             <li><a href="blank.html">Контакты</a></li>
+            <li><a href="blank.html">Материалы</a></li>
+            <li><a href="blank.html">Техника</a></li>
+            <li><a href="blank.html">Инструмент</a></li>
+            <li><a href="blank.html">Спецпредложения</a></li>
            </ul>
-          </nav>
-          <ul>
-           <li><a href="blank.html">Материалы</a></li>
-           <li><a href="blank.html">Техника</a></li>
-           <li><a href="blank.html">Инструмент</a></li>
-           <li><a href="blank.html">Спецпредложения</a></li>
-          </ul>
         </section>
         <section>
           <h2>Связи</h2>
-          <p>© 2010–2019 Компания «Техномарт»<br>
+          <p>&copy; 2010–2019 Компания «Техномарт»
              Все права защищены</p>
           <h3>Мы в соцсетях</h3>
           <ul>
