@@ -2,6 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Техномарт: Каталог</title>
   </head>
   <body>
@@ -38,7 +42,7 @@
     </header>
     <main>
      <ul>
-         <li><a href="index.html"><img src="img/icons/home.svg" width="13.98" height="12" alt="Главная">Главная</a></li>
+         <li><a href="index.html"><img src="img/icons/home.svg" width="14" height="12" alt="Главная">Главная</a></li>
          <li><a href="blank.html">Каталог</a></li>
          <li><a href="blank.html">Инструмент</a></li>
          <li><a href="blank.html">Перфораторы</a></li>
@@ -49,8 +53,8 @@
         <form method="get" action="https://echo.htmlacademy.ru" name="filter">
           <fieldset>
             <legend>Цена:</legend>
-            <input type="number" name="price" id="price" maxlength="5" min="0" max="40000" placeholder="0" step="100"> -
-            <input type="number" name="price" id="price" maxlength="5" min="0" max="40000" placeholder="30000" step="100">
+            <input type="number" name="price" id="price-1" min="0" max="40000" placeholder="0" step="100"> -
+            <input type="number" name="price" id="price-2" min="0" max="40000" placeholder="30000" step="100">
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -180,6 +184,7 @@
             <li><a href="blank.html">Инструмент</a></li>
             <li><a href="blank.html">Спецпредложения</a></li>
            </ul>
+          </nav>
         </section>
         <section>
           <h2>Связи</h2>
