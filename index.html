@@ -29,8 +29,16 @@
         <p class="header-info">Интернет магазин строительных материалов и инструментов для ремонта</p>
         <a class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        <a class="sign-in" href="blank.html">Войти</a>
-        <a class="registration" href="blank.html">Регистрация</a>
+        <div class="unknown-user">
+          <a class="sign-in" href="blank.html">Войти</a>
+          <a class="registration" href="blank.html">Регистрация</a>
+        </div>
+        <div class="our-client">
+          <a class="client-name" href="blank.html">Равшан Джамшутович</a>
+          <a href="blank.html">Выйти</a>
+          <a class="client-options" href="blank.html">Мои заказы</a>
+          <a class="client-options" href="blank.html">Личный кабинет</a>
+        </div>
         <nav class="main-navigation">
          <div><a href="#">Главная</a></div>
          <div><a href="blank.html">Компания</a></div>
@@ -52,7 +60,7 @@
            <li class="materials"><h4>Материалы</h4>
             <img src="img/icons/icon-1.svg" width="44" height="65" alt="">
             <a class="button block" href="blank.html">На любой вкус</a>
-            <div class="new-chaplet">NEW</div>
+            <p class="new-chaplet">NEW</p>
            </li>
            <li class="tools"><h4>Инструмент</h4>
             <img src="img/icons/icon-2.svg" width="75" height="61" alt="">
@@ -101,29 +109,45 @@
         <ul class="popular-products-blocks">
           <li>
             <img src="img/products/bosch/bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+            <div>
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button bookmarks" href="blank.html">В закладки</a>
+            </div>
             <a href="blank.html">Перфоратор BOSCH BFG 9000</a>
             <p class="old-price">32500 Р.</p>
-            <div class="actual-price">25500 Р.</div>
+            <p class="actual-price">25500 Р.</p>
           </li>
           <li>
             <img src="img/products/bosch/bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+            <div>
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button bookmarks" href="blank.html">В закладки</a>
+            </div>
             <a href="blank.html">Перфоратор BOSCH BFG 3000</a>
             <p class="old-price">22500 Р.</p>
-            <div class="actual-price">15500 Р.</div>
-            <div class="new-chaplet">NEW</div>
+            <p class="actual-price">15500 Р.</p>
+            <p class="new-chaplet">NEW</p>
           </li>
           <li>
             <img src="img/products/bosch/bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+            <div>
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button bookmarks" href="blank.html">В закладки</a>
+            </div>
             <a href="blank.html">Перфоратор BOSCH BFG 6000</a>
             <p class="old-price">30500 Р.</p>
-            <div class="actual-price">25500 Р.</div>
+            <p class="actual-price">25500 Р.</p>
           </li>
           <li>
             <img src="img/products/bosch/bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+            <div>
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button bookmarks" href="blank.html">В закладки</a>
+            </div>
             <a href="blank.html">Перфоратор BOSCH BFG 2000</a>
             <p class="old-price">22500 Р.</p>
-            <div class="actual-price">12500 Р.</div>
-            <div class="new-chaplet">NEW</div>
+            <p class="actual-price">12500 Р.</p>
+            <p class="new-chaplet">NEW</p>
           </li>
         </ul>
       </section>
@@ -169,13 +193,29 @@
           <li><a href="blank.html">Гарантия</a></li>
           <li><a href="blank.html">Кредит</a></li>
         </ul>
-        <div class="services-delivery">
-          <h3 class="headliner">Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо
-             к вашему подъезду совершенно бесплатно!
-             Ведь мы неплохо заработаем,
-             поднимая его на ваш этаж!</p>
-        </div>
+        <ul class="services-submenu">
+          <li class="services-delivery">
+            <h3 class="headliner">Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо
+               к вашему подъезду совершенно бесплатно!
+               Ведь мы неплохо заработаем,
+               поднимая его на ваш этаж!</p>
+          </li>
+          <li class="services-guarantee">
+            <h3 class="headliner">Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит,
+              а также в случае пожара, спровоцированного его возгоранием,
+              вы всегда можете быть уверены в нашей гарантии.
+              Мы обменяем сгоревший товар на новый.
+              Дом уж восстановите как-нибудь сами.</p>
+          </li>
+          <li class="services-credit">
+            <h3 class="headliner">Кредит</h3>
+            <p>Залезть в долговую яму стало проще!
+               Кредитные консультанты придут вам на помощь.</p>
+            <a class="button" href="blank.html">Отправить заявку</a>
+          </li>
+        </ul>
       </section>
       <section class="contacts-info">
         <h2 class="hide">Контакты</h2>

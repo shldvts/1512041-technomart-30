@@ -54,12 +54,12 @@
   --basic-white: #ffffff;
   --basic-black: #000000;
   --basic-gray: #888888;
-  --basic-greylight: #C5C5C5;
+  --basic-graylight: #C5C5C5;
   --basic-red: #EE3643;
   --basic-topblue: #293449;;
   --basic-darkblue: #32425C;
   --basic-green: #63A63E;
-  --header-background: rgba(0, 0, 0, 0.0001);
+  --section-background: #F1F5F7;
   --block-gold: #FFBF47;
   --block-skyblue: #3BBCE3;
   --block-purple: #DC91D8;
@@ -69,22 +69,24 @@
   --block-button-preclick: rgba(197, 197, 197, 0.3);
   --block-button-click: rgba(169, 169, 169, 0.3);
   --section-lightbrown: #F9F5F0;
-  --section-background: #F1F5F7;
   --social-background: #212A3A;
   --section-lightblue: #F2F6F8;
   --filter-beige: #F7F3EC;
   --preclick-red: #CA2C37;
   --click-red: #BA2732;
   --preclick-green: #5FBB2D;
-  --click-green: #5FBB2D;
+  --click-green: #518534;
   --preclick-topblue: #293449;
   --click-topblue: #161D29;
   --click-darkblue: #1D2739;
-  --old-grey: #A9A9A9;
+  --old-gray: #A9A9A9;
   --text-lemon: #FFD180;
   --text-light: #F3F7F9;
   --text-light-one: #F1F5F7;
   --white-50: rgba(255, 255, 255, 0.5);
+  --border-gray: #EAEAEA;
+  --border-button-gray: #E5E5E5;
+  --radio-hover-gray: #B5B5B5;
 }
 
 /*Global*/
@@ -138,6 +140,40 @@ ul {
   background-color: var(--click-red);
 }
 
+.button.buy {
+  background-color: var(--basic-green);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button.buy:hover {
+  background-color: var(--preclick-green);
+}
+
+.button.buy:active {
+  background-color: var(--click-green);
+}
+
+.button.bookmarks {
+  background-color: var(--basic-white);
+  color: var(--basic-darkblue);
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button.bookmarks:hover {
+  color: var(--basic-darkblue);
+  border: 3px solid var(--basic-darkblue);
+}
+
+.button.bookmarks:active {
+  color: var(--basic-darkblue);
+  border: 3px solid var(--basic-darkblue);
+  opacity: 0.5;
+}
+
 .headliner {
   color: var(--basic-darkblue);
   font-size: 30px;
@@ -154,7 +190,7 @@ ul {
 }
 
 .old-price {
-  color: var(--old-grey);
+  color: var(--old-gray);
   text-transform: uppercase;
   text-decoration: line-through;
   font-size: 17px;
@@ -217,21 +253,44 @@ ul {
 }
 
 .section-header {
-  background-color: var(--header-background);
+  background-color: var(--section-background);
 }
 
-.sign-in, .registration {
+.sign-in,
+.registration,
+.client-name {
   color: var(--basic-black);
   font-size: 21px;
   line-height: 21px;
 }
 
-.sign-in:hover, .registration:hover {
+.sign-in:hover,
+.registration:hover {
   color: var(--basic-red);
 }
 
-.sign-in:active, .registration:active {
-  color: var(--basic-greylight);
+.sign-in:active,
+.registration:active,
+.client-name:active {
+  color: var(--basic-graylight);
+}
+
+.client-name:hover {
+  color: var(--basic-black);
+}
+
+.client-options {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-darkblue);
+}
+
+.client-options:hover {
+  color: var(--basic-red);
+}
+
+.client-options:active {
+  color: var(--basic-graylight);
 }
 
 .header-info {
@@ -253,6 +312,7 @@ ul {
 
 .header-address {
   color: var(--basic-darkblue);
+  font-style: normal;
   font-size: 14px;
 }
 
@@ -268,7 +328,7 @@ ul {
   background-color: var(--click-darkblue);
 }
 
-/* Главная */
+/* ГЛАВНАЯ */
 /* Секция Товары и Акции */
 
 .block h4{
@@ -347,6 +407,24 @@ ul {
   background-color: var(--section-lightbrown);
 }
 
+.popular-producer-blocks li {
+  background-color: var(--basic-white);
+  border: 1px solid var(--border-gray);
+  height: 145px;
+  width: 220px;
+}
+
+.popular-producer-blocks li:hover {
+  background-color: var(--basic-white);
+  border: 1px solid var(--border-gray);
+}
+
+.popular-producer-blocks li:active {
+  background-color: var(--basic-white);
+  border: 1px solid var(--border-gray);
+  opacity: 0.3;
+}
+
 /* Секция Сервисы*/
 
 .services-division {
@@ -358,10 +436,6 @@ ul {
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-}
-
-.services-delivery {
-  background-image: url(../img/delivery.png);
 }
 
 .services-menu li {
@@ -381,6 +455,22 @@ ul {
   color: var(--basic-darkblue);
 }
 
+.services-submenu li {
+  background-repeat: no-repeat;
+}
+
+.services-delivery {
+  background-image: url(../img/delivery.png);
+}
+
+.services-guarantee {
+  background-image: url(../img/guarantee.png);
+}
+
+.services-credit {
+  background-image: url(../img/credit.png);
+}
+
 /* Секция Информация Контакты*/
 
 .contacts-info {
@@ -393,6 +483,128 @@ ul {
   font-size: 13px;
   line-height: 24px;
 }
+
+/* КАТАЛОГ */
+
+.catalog-page {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.bread-crumbs a {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.catalog-name {
+  font-family: "Cuprum", "Arial", sans-serif;
+  background-color: var(--section-lightblue);
+  color: var(--basic-darkblue);
+}
+
+.products-filter p,
+.price-filter input {
+  background-color: var(--filter-beige);
+}
+
+.producer-filter li,
+.power-filter li {
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.filter-name {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.producer-filter li:disabled,
+.power-filter li:disabled {
+  opacity: 0.4;
+}
+
+/* Чекбоксы и Радиокнопки */
+
+.producer-filter img,
+.power-filter img {
+  color: var(--basic-graylight);
+}
+
+.producer-filter img:hover,
+.power-filter img:hover,
+.producer-filter img:disabled,
+.power-filter img:disabled {
+  color: var(--radio-hover-gray);
+}
+
+/* - - - - - - - - - - - - - - */
+
+.catalog-button {
+  border: 1px solid var(--border-button-gray);
+  border-radius: 2px;
+  background-color: var(--basic-white);
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.catalog-button:hover {
+  border-color: var(--basic-graylight);
+}
+
+.catalog-button:active {
+  border-color: var(--basic-red);
+}
+
+.products-subfilter-line {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--filter-beige);
+}
+
+.products-subfilter-line a {
+  color: var(--basic-black);
+  opacity: 0.3;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--basic-red);
+}
+
+.products-subfilter-line a:hover {
+  color: var(--basic-black);
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--basic-red);
+}
+
+.products-subfilter-line a:active {
+  color: var(--basic-red);
+  opacity: 1;
+  text-decoration: none;
+}
+
+.info-note {
+  background-color: var(--text-light-one);
+  text-transform: none;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.info-note h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+/* footer */
 
 .big-footer-division {
   background-color: var(--basic-darkblue);
