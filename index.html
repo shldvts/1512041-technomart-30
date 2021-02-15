@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <link rel="icon" href="favicon.ico">
@@ -14,21 +14,23 @@
   </head>
 
   <body>
-    <header>
-      <section class="main-section-header">
-       <div class="logo-pic"><a href="#"><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип компании Техномарт"></a></div>
-       <form action="#" class="search-field">
-        <input type="search" name="search" placeholder="Поиск:">
-        <input class="hide" type="submit" value="Найти">
-       </form>
-       <a class="bookmarks" href="blank.html">Закладки: 0</a>
-       <a class="basket" href="blank.html">Корзина: 0</a>
-       <a class="get-order" href="blank.html">Оформить заказ</a>
+    <header class="main-header">
+      <section class="main-section-header container">
+        <div class="logo-pic"><a href="#"><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип компании Техномарт"></a></div>
+        <form action="#" class="search-field">
+         <input type="search" name="search" placeholder="Поиск:">
+         <input class="hide" type="submit" value="Найти">
+        </form>
+        <a class="bookmarks" href="blank.html">Закладки: 0</a>
+        <a class="basket" href="blank.html">Корзина: 0</a>
+        <a class="get-order" href="blank.html">Оформить заказ</a>
       </section>
-      <section class="big-header-section">
+      <section class="sub-section-header container">
         <p class="header-info">Интернет магазин строительных материалов и инструментов для ремонта</p>
-        <a class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <div class="header-contacts">
+          <a class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </div>
         <div class="unknown-user">
           <a class="sign-in" href="blank.html">Войти</a>
           <a class="registration" href="blank.html">Регистрация</a>
@@ -39,67 +41,65 @@
           <a class="client-options" href="blank.html">Мои заказы</a>
           <a class="client-options" href="blank.html">Личный кабинет</a>
         </div>
-        <nav class="main-navigation">
-         <div><a href="#">Главная</a></div>
-         <div><a href="blank.html">Компания</a></div>
-         <div><a href="catalog.html">Каталог</a></div>
-         <div><a href="blank.html">Новости</a></div>
-         <div><a href="blank.html">Спецпредложения</a></div>
-         <div><a href="blank.html">Доставка</a></div>
-         <div><a href="blank.html">Контакты</a></div>
-        </nav>
       </section>
+      <nav class="main-navigation container">
+       <div><a href="#">Главная</a></div>
+       <div><a href="blank.html">Компания</a></div>
+       <div><a href="catalog.html">Каталог</a></div>
+       <div><a href="blank.html">Новости</a></div>
+       <div><a href="blank.html">Спецпредложения</a></div>
+       <div><a href="blank.html">Доставка</a></div>
+       <div><a href="blank.html">Контакты</a></div>
+      </nav>
     </header>
 
-    <main>
+    <main class="container">
       <h1 class="hide">Интернет-магазин инструмента и стройматериалов «Техномарт»</h1>
+
       <section>
         <h2 class="hide">Товары и акции</h2>
-         <h3 class="hide">Ассортимент</h3>
-          <ul class="block assortment">
-           <li class="materials"><h4>Материалы</h4>
-            <img src="img/icons/icon-1.svg" width="44" height="65" alt="">
-            <a class="button block" href="blank.html">На любой вкус</a>
-            <p class="new-chaplet">NEW</p>
-           </li>
-           <li class="tools"><h4>Инструмент</h4>
-            <img src="img/icons/icon-2.svg" width="75" height="61" alt="">
-            <a class="button block" href="blank.html">На все случаи</a>
-           </li>
-           <li class="technics"><h4>Техника</h4>
-            <img src="img/icons/icon-3.svg" width="78" height="62" alt="">
-            <a class="button block" href="blank.html">Для стройки</a>
-           </li>
-          </ul>
-          <div class="promo-slider">
-           <ul>
-            <li>
-             <h4>Перфораторы</h4>
-             <p>Настоящие мужские игрушки</p>
-             <img src="img/perfs-slider.jpg" width="620" height="266" alt="Слайд работа перфоратором">
-            </li>
-            <li>
-             <h4>Дрели</h4>
-             <p>Соседям на радость!</p>
-             <img src="img/drills-slider.jpg" width="620" height="266" alt="Слайд работа дрелью">
-            </li>
-           </ul>
-           <a class="button" href="blank.html">Открыть каталог</a>
-           <button type="button">Назад</button>
-           <button type="button">Вперед</button>
-          </div>
-        <h3 class="hide">Акции</h3>
-        <ul class="block stock">
-         <li class="sale"><h4>Скидки 50%</h4>
-           <img src="img/icons/icon-4.svg" width="59" height="71" alt="">
-           <a class="button block" href="blank.html">На 350 товаров</a>
+        <ul class="block assortment">
+         <li class="materials"><h3>Материалы</h3>
+          <img src="img/icons/icon-1.svg" width="44" height="65" alt="">
+          <a class="button block" href="blank.html">На любой вкус</a>
+          <p class="new-chaplet">NEW</p>
          </li>
-         <li class="delivery"><h4>Доставка</h4>
-          <img src="img/icons/icon-5.svg" width="78" height="63" alt="">
-          <a class="button block" href="blank.html">Бесплатно</a>
+         <li class="tools"><h3>Инструмент</h3>
+          <img src="img/icons/icon-2.svg" width="75" height="61" alt="">
+          <a class="button block" href="blank.html">На все случаи</a>
          </li>
+         <li class="technics"><h3>Техника</h3>
+          <img src="img/icons/icon-3.svg" width="78" height="62" alt="">
+          <a class="button block" href="blank.html">Для стройки</a>
+         </li>
+         <li class="sale"><h3>Скидки 50%</h3>
+          <img src="img/icons/icon-4.svg" width="59" height="71" alt="">
+          <a class="button block" href="blank.html">На 350 товаров</a>
+        </li>
+        <li class="delivery"><h3>Доставка</h3>
+         <img src="img/icons/icon-5.svg" width="78" height="63" alt="">
+         <a class="button block" href="blank.html">Бесплатно</a>
+        </li>
         </ul>
+        <div class="promo-slider">
+         <ul>
+          <li>
+           <h3>Перфораторы</h3>
+           <p>Настоящие мужские игрушки</p>
+           <img src="img/perfs-slider.jpg" width="620" height="266" alt="Слайд работа перфоратором">
+          </li>
+          <li>
+           <h3>Дрели</h3>
+           <p>Соседям на радость!</p>
+           <img src="img/drills-slider.jpg" width="620" height="266" alt="Слайд работа дрелью">
+          </li>
+         </ul>
+         <a class="button" href="blank.html">Открыть каталог</a>
+         <button type="button">Назад</button>
+         <button type="button">Вперед</button>
+        </div>
       </section>
+
       <section class="popular-products">
         <h3 class="hide">Популярные товары</h3>
         <div class="popular-products-band">
@@ -151,6 +151,7 @@
           </li>
         </ul>
       </section>
+
       <section class="popular-producer">
         <h3 class="hide">Популярные производители</h3>
         <div class="popular-producer-band">
@@ -244,42 +245,51 @@
     </main>
 
     <footer>
-      <section class="big-footer-division">
+      <section class="footer-division-bar">
+       <div class="container footer-division">
         <h2 class="hide">Обзор страницы</h2>
         <div class="logo-pic"><a href="#"><img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип компании Техномарт"></a></div>
-        <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        <a class="footer-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <nav class="footer-navigation">
-         <ul class="first-footer-nav">
+        <div class="footer-address"><address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <a class="footer-tel" href="tel:+78125550555">+7 (812) 555-05-55</a></div>
+        <nav class="first-footer-nav">
+         <ul>
           <li><a href="blank.html">Компания</a></li>
           <li><a href="blank.html">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="blank.html">Доставка</a></li>
           <li><a href="blank.html">Контакты</a></li>
          </ul>
-         <ul class="second-footer-nav">
+        </nav>
+        <nav class="second-footer-nav">
+         <ul>
           <li><a href="blank.html">Материалы</a></li>
           <li><a href="blank.html">Техника</a></li>
           <li><a href="blank.html">Инструмент</a></li>
           <li><a href="blank.html">Спецпредложения</a></li>
          </ul>
         </nav>
+       </div>
       </section>
-      <section class="main-footer">
-        <h2 class="hide">Связи</h2>
-        <p>&copy; 2010–2019 Компания «Техномарт»
-           Все права защищены</p>
-        <h3 class="hide">Мы в соцсетях</h3>
-        <ul class="social-club">
-          <li><a href="#"><img src="img/icons/icon-vk.svg" width="25" height="14" alt="Вконтакте"></a></li>
-          <li><a href="#"><img src="img/icons/icon-fb.svg" width="12" height="22" alt="Facebook"></a></li>
-          <li><a href="#"><img src="img/icons/icon-insta.svg" width="21" height="21" alt="Instagram"></a></li>
-        </ul>
-        <div class="connect-info">
-          <p>Обратная связь:</p>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          <p>Разработано -</p>
-          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+      <section class="main-footer-bar">
+        <div class="container main-footer">
+          <div><h2 class="hide">Связи</h2>
+            <p>&copy; 2010–2019 Компания «Техномарт» Все права защищены</p>
+          </div>
+          <div><h3 class="hide">Мы в соцсетях</h3>
+            <ul class="social-club">
+              <li><a href="#"><img src="img/icons/icon-vk.svg" width="25" height="14" alt="Вконтакте"></a></li>
+              <li><a href="#"><img src="img/icons/icon-fb.svg" width="12" height="22" alt="Facebook"></a></li>
+              <li><a href="#"><img src="img/icons/icon-insta.svg" width="21" height="21" alt="Instagram"></a></li>
+            </ul>
+          </div>
+          <div class="connect-info mail">
+            <p>Обратная связь:</p>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="connect-info by">
+            <p>Разработано -</p>
+            <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+          </div>
         </div>
       </section>
     </footer>
