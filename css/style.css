@@ -225,7 +225,6 @@ ul {
 
 .main-header {
   background-color: var(--section-background);
-  margin-bottom: 59px;
 }
 
 .main-header-bar {
@@ -233,10 +232,9 @@ ul {
 }
 
 .main-section-header {
-
   color: var(--basic-white);
   margin-bottom: 46px;
-  }
+}
 
 .logo-pic {
   background-color: var(--basic-red);
@@ -380,6 +378,7 @@ ul {
 /* Секция Товары и Акции */
 
 .products-promotions {
+  margin-top: 59px;
   margin-bottom: 59px;
 }
 
@@ -591,6 +590,7 @@ ul {
 
 .contacts-info {
   color: var(--basic-black);
+  padding-bottom: 70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -602,14 +602,7 @@ ul {
   line-height: 24px;
 }
 
-/* КАТАЛОГ */
-
-.catalog-page {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
-  color: var(--basic-black);
-  text-transform: uppercase;
-}
+/* Catalog */
 
 .bread-crumbs a {
   font-size: 13px;
@@ -622,6 +615,22 @@ ul {
   font-family: "Cuprum", "Arial", sans-serif;
   background-color: var(--section-lightblue);
   color: var(--basic-darkblue);
+}
+
+.catalog-page {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 38px 1fr;
+  gap: 20px;
+}
+
+.products-filter {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
 }
 
 .products-filter p,
@@ -641,9 +650,51 @@ ul {
   line-height: 30px;
 }
 
+.products-sorting {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--filter-beige);
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.products-sorting a {
+  color: var(--basic-black);
+  opacity: 0.3;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--basic-red);
+}
+
+.products-sorting a:hover {
+  color: var(--basic-black);
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--basic-red);
+}
+
+.products-sorting a:active {
+  color: var(--basic-red);
+  opacity: 1;
+  text-decoration: none;
+}
+
+.perforators-list li {
+  border: 1px solid var(--border-gray);
+  box-sizing: border-box;
+  display: inline-block;
+  height: 318px;
+  width: 220px;
+}
+
 .producer-filter li:disabled,
 .power-filter li:disabled {
   opacity: 0.4;
+}
+
+.pages-navigation {
+  grid-column: 2 / -1;
 }
 
 /* Чекбоксы и Радиокнопки */
@@ -682,39 +733,14 @@ ul {
   border-color: var(--basic-red);
 }
 
-.products-subfilter-line {
-  font-size: 13px;
-  line-height: 18px;
-  background-color: var(--filter-beige);
-}
-
-.products-subfilter-line a {
-  color: var(--basic-black);
-  opacity: 0.3;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-color: var(--basic-red);
-}
-
-.products-subfilter-line a:hover {
-  color: var(--basic-black);
-  opacity: 1;
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-color: var(--basic-red);
-}
-
-.products-subfilter-line a:active {
-  color: var(--basic-red);
-  opacity: 1;
-  text-decoration: none;
-}
-
 .info-note {
   background-color: var(--text-light-one);
   text-transform: none;
   font-size: 13px;
   line-height: 24px;
+  padding-top: 64px;
+  padding-bottom: 68px;
+  margin-top: 59px;
 }
 
 .info-note h2 {
@@ -726,7 +752,6 @@ ul {
 
 .footer-division-bar {
   background-color: var(--basic-darkblue);
-  margin-top: 70px;
 }
 
 .footer-division {
