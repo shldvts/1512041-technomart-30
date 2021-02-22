@@ -234,15 +234,15 @@ ul {
 .main-section-header {
   color: var(--basic-white);
   margin-bottom: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-pic {
   background-color: var(--basic-red);
   color: var(--basic-white);
-  width: 220px;
-  height: 47px;
-  text-align: center;
-  vertical-align: middle;
+  padding: 12px 56px 17px 56px;
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
@@ -280,8 +280,8 @@ ul {
 }
 
 .sub-section-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-info {
@@ -291,12 +291,14 @@ ul {
   color: var(--basic-red);
   font-size: 16px;
   line-height: 23px;
-  grid-column: 1 / 2;
+  width: 195px;
+  min-height: 70px;
+  padding-left: 30px;
+
 }
 
 .header-contacts {
   text-align: center;
-  grid-column: 2 / 3;
 }
 
 .header-tel {
@@ -307,6 +309,7 @@ ul {
   line-height: 30px;
   border: 3px solid var(--basic-white);
   box-sizing: border-box;
+  padding: 7px 45px 8px 74px;
 }
 
 .header-address {
@@ -314,11 +317,12 @@ ul {
   font-style: normal;
   font-size: 14px;
   text-align: center;
+  margin-top: 3px;
 }
 
-.unknown-user,
-.our-client {
-  grid-column: 3 / 4;
+.unknown-user {
+  display: flex;
+  align-items: flex-start;
 }
 
 .our-client {
@@ -328,9 +332,24 @@ ul {
 .sign-in,
 .registration,
 .client-name {
+  background-color: var(--basic-white);
+}
+
+.sign-in a,
+.registration a,
+.client-name a {
   color: var(--basic-black);
   font-size: 21px;
   line-height: 21px;
+}
+
+.sign-in {
+  padding: 12px 27px 12px 45px;
+  margin-right: 10px;
+}
+
+.registration {
+  padding: 12px 24px;
 }
 
 .sign-in:hover,
@@ -364,6 +383,17 @@ ul {
 
 .main-navigation {
   background-color: var(--basic-darkblue);
+  box-shadow: inset 0px -5px 0px #293449;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.main-navigation div {
+  padding: 16px 24px 20px 27px;
 }
 
 .main-navigation div:hover {
@@ -387,6 +417,7 @@ ul {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
+  margin: 0;
 }
 
 .block.assortment {
@@ -398,6 +429,15 @@ ul {
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 123px 123px 123px;
+}
+
+.block.assortment li {
+  padding: 20px 0 21px 22px;
+}
+
+.block.assortment img {
+  float: right;
+  padding-right: 31px;
 }
 
 .materials {
@@ -425,10 +465,32 @@ ul {
   grid-area: deliv;
 }
 
+.button.block {
+  background-color: var(--block-button);
+  width: 135px;
+  min-height: 38px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 14px;
+}
+
+.button.block:hover {
+  background-color: var(--block-button-preclick);
+}
+
+.button.block:active {
+  background-color: var(--block-button-click);
+}
+
 .promo-slider {
   background-color: var(--basic-gray);
   color: var(--basic-white);
   grid-area: slide;
+  padding: 0;
+  margin: 0;
 }
 
 .promo-slider h3 {
@@ -446,20 +508,8 @@ ul {
   display: none;
 }
 
-.promo-slider .button {
-  background-color: var(--basic-red);
-}
-
-.button.block {
-  background-color: var(--block-button);
-}
-
-.button.block:hover {
-  background-color: var(--block-button-preclick);
-}
-
-.button.block:active {
-  background-color: var(--block-button-click);
+.promo-slider a {
+  padding: 11px 46px 9px 46px;
 }
 
 /* Секция Популярные товары */
@@ -468,14 +518,26 @@ ul {
   background-color: var(--section-lightbrown);
   margin-top: 59px;
   margin-bottom: 20px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-products-band p {
+  padding-left: 28px;
+}
+
+.popular-products-band div {
+  padding-right: 14px;
+}
+
+.popular-products-band a {
+  padding: 11px 24px 9px 24px;
 }
 
 .popular-products-blocks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 70px;
 }
 
@@ -484,6 +546,15 @@ ul {
   font-weight: 700;
   text-align: center;
   border: 1px solid var(--border-gray);
+  width: 220px;
+  min-height: 318px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.popular-products-blocks li:nth-child(4n) {
+  margin-right: 0;
 }
 
 .popular-products-blocks a {
@@ -495,10 +566,23 @@ ul {
 
 .popular-producer-band {
   background-color: var(--section-lightbrown);
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  align-items: center;
   margin-top: 70px;
   margin-bottom: 20px;
+}
+
+.popular-producer-band p {
+  padding-left: 28px;
+  flex-grow: 1;
+}
+
+.popular-producer-band div {
+  padding-right: 19px;
+}
+
+.popular-producer-band a {
+  padding: 11px 38px 9px 39px;
 }
 
 .popular-producer-blocks {
@@ -513,8 +597,6 @@ ul {
   border: 1px solid var(--border-gray);
   height: 145px;
   width: 220px;
-  text-align: center;
-  vertical-align: middle;
 }
 
 .popular-producer-blocks li:hover {
@@ -533,6 +615,7 @@ ul {
 .services-division {
   background-color: var(--section-background);
   margin-bottom: 70px;
+  padding-top: 64px;
 }
 
 .services-division p {
@@ -600,6 +683,10 @@ ul {
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
+}
+
+.about-us a {
+  padding: 11px 40px 9px 39px;
 }
 
 /* Catalog */
@@ -749,6 +836,7 @@ ul {
 }
 
 /* footer */
+/* 1 footer section */
 
 .footer-division-bar {
   background-color: var(--basic-darkblue);
@@ -809,16 +897,24 @@ ul {
   opacity: 0.5;
 }
 
+/* 2 footer section */
+
+.main-footer-bar {
+  background-color: var(--basic-topblue);
+}
+
 .main-footer {
   color: var(--basic-white);
   font-size: 16px;
   line-height: 18px;
-  display: grid;
-  grid-template-columns: 2fr 2fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.main-footer-bar {
-  background-color: var(--basic-topblue);
+.copyright {
+  width: 227px;
+  min-height: 37px;
 }
 
 .social-club li {
@@ -836,8 +932,16 @@ ul {
   background-color: var(--basic-red);
 }
 
+.connect-info {
+  flex-basis: 140px;
+}
+
 .connect-info a {
   color: var(--text-lemon);
+}
+
+.connect-info p {
+  margin: 0;
 }
 
 .connect-info a:hover {

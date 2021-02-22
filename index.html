@@ -37,8 +37,8 @@
           <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="unknown-user">
-          <a class="sign-in" href="blank.html">Войти</a>
-          <a class="registration" href="blank.html">Регистрация</a>
+          <div class="sign-in"><a href="blank.html">Войти</a></div>
+          <div class="registration"><a href="blank.html">Регистрация</a></div>
         </div>
         <div class="our-client">
           <a class="client-name" href="blank.html">Равшан Джамшутович</a>
@@ -64,24 +64,29 @@
       <section class="products-promotions">
         <h2 class="hide">Товары и акции</h2>
         <ul class="block assortment">
-          <li class="materials"><h3>Материалы</h3>
+          <li class="materials">
+            <h3>Материалы</h3>
             <img src="img/icons/icon-1.svg" width="44" height="65" alt="">
             <a class="button block" href="blank.html">На любой вкус</a>
             <p class="new-chaplet">NEW</p>
           </li>
-          <li class="tools"><h3>Инструмент</h3>
+          <li class="tools">
+            <h3>Инструмент</h3>
             <img src="img/icons/icon-2.svg" width="75" height="61" alt="">
             <a class="button block" href="blank.html">На все случаи</a>
           </li>
-          <li class="technics"><h3>Техника</h3>
+          <li class="technics">
+            <h3>Техника</h3>
             <img src="img/icons/icon-3.svg" width="78" height="62" alt="">
             <a class="button block" href="blank.html">Для стройки</a>
           </li>
-          <li class="sale"><h3>Скидки 50%</h3>
+          <li class="sale">
+            <h3>Скидки 50%</h3>
             <img src="img/icons/icon-4.svg" width="59" height="71" alt="">
             <a class="button block" href="blank.html">На 350 товаров</a>
           </li>
-          <li class="delivery"><h3>Доставка</h3>
+          <li class="delivery">
+            <h3>Доставка</h3>
             <img src="img/icons/icon-5.svg" width="78" height="63" alt="">
             <a class="button block" href="blank.html">Бесплатно</a>
           </li>
@@ -98,7 +103,7 @@
                 <img src="img/drills-slider.jpg" width="620" height="266" alt="Слайд работа дрелью">
               </li>
             </ul>
-            <a class="button" href="blank.html">Открыть каталог</a>
+            <div><a class="button" href="blank.html">Открыть каталог</a></div>
             <button type="button">Назад</button>
             <button type="button">Вперед</button>
           </li>
@@ -109,7 +114,7 @@
         <h3 class="hide">Популярные товары</h3>
         <div class="popular-products-band">
           <p class="headliner">Популярные товары:</p>
-          <a class="button" href="blank.html">Все популярные товары</a>
+          <div><a class="button" href="blank.html">Все популярные товары</a></div>
         </div>
         <ul class="popular-products-blocks">
           <li>
@@ -161,7 +166,7 @@
         <h3 class="hide">Популярные производители</h3>
         <div class="popular-producer-band">
           <p class="headliner">Популярные производители:</p>
-          <a class="button" href="blank.html">Все производители</a>
+          <div><a class="button" href="blank.html">Все производители</a></div>
         </div>
         <ul class="popular-producer-blocks">
           <li>
@@ -228,27 +233,27 @@
       </section>
 
       <section class="contacts-info">
-        <h2 class="hide">Контакты</h2>
-        <div>
+        <h2 class="hide">О нас</h2>
+        <div class="about-us">
           <h3 class="headliner">Компания «Техномарт»</h3>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
             ремонта и строительства не оставит равнодушными любителей сэкономить на
             гастарбайтерах.
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:</p>
-          <ul>
+          <ul class="cargo-delivery">
             <li>Деловые линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="button" href="blank.html">Подробнее о компании</a>
+          <div><a class="button" href="blank.html">Подробнее о компании</a></div>
         </div>
-        <div>
-          <h3 class="headliner">Контакты</h3>
+        <div class="about-location">
+          <h3 class="headliner">Как проехать</h3>
           <p>Вы можете забрать товар сами,
             заехав в наш офис:</p>
           <a href="blank.html"><img src="img/map.png" width="300" height="158" alt="Карта"></a>
-          <a class="button" href="mailto:#">Заблудились? Напишите нам!</a>
+          <div><a class="button" href="mailto:#">Заблудились? Напишите нам!</a></div>
         </div>
       </section>
     </main>
@@ -283,15 +288,16 @@
           </nav>
         </div>
       </section>
+
       <section class="main-footer-bar">
         <div class="container main-footer">
-          <div>
+          <div class="copyright">
             <h2 class="hide">Связи</h2>
             <p>&copy; 2010–2019 Компания «Техномарт» Все права защищены</p>
           </div>
-          <div>
+          <div class="social-club">
             <h3 class="hide">Мы в соцсетях</h3>
-            <ul class="social-club">
+            <ul>
               <li><a href="#"><img src="img/icons/icon-vk.svg" width="25" height="14" alt="Вконтакте"></a></li>
               <li><a href="#"><img src="img/icons/icon-fb.svg" width="12" height="22" alt="Facebook"></a></li>
               <li><a href="#"><img src="img/icons/icon-insta.svg" width="21" height="21" alt="Instagram"></a></li>
