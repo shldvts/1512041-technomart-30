@@ -25,7 +25,7 @@
           </div>
           <form action="#" class="search-field">
             <input type="search" name="search" placeholder="Поиск:">
-            <input class="hide" type="submit" value="Найти">
+            <input type="submit" value="">
           </form>
           <a class="bookmarks" href="blank.html">Закладки: 0</a>
           <a class="basket" href="blank.html">Корзина: 0</a>
@@ -33,31 +33,35 @@
         </div>
       </section>
       <section class="sub-section-header container">
-        <span class="header-info">Интернет-магазин строительных материалов и инструментов для ремонта</span>
+        <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-contacts">
           <a class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <div class="unknown-user">
-          <a class="sign-in" href="blank.html">Войти</a>
-          <a class="registration" href="blank.html">Регистрация</a>
-        </div>
-        <div class="our-client">
-          <a class="client-name" href="blank.html">Равшан Джамшутович</a>
-          <a href="blank.html">Выйти</a>
-          <a class="client-options" href="blank.html">Мои заказы</a>
-          <a class="client-options" href="blank.html">Личный кабинет</a>
+        <div class="account-area">
+          <div class="unknown-user">
+            <a class="login" href="blank.html">Войти</a>
+            <a class="registration" href="blank.html">Регистрация</a>
+          </div>
+          <div class="account-hidden">
+            <a class="client-name" href="blank.html">Равшан Джамшутович</a>
+            <a href="blank.html">Выйти</a>
+            <a class="client-options" href="blank.html">Мои заказы</a>
+            <a class="client-options" href="blank.html">Личный кабинет</a>
+          </div>
         </div>
       </section>
       <div class="container">
-        <nav class="main-navigation">
-          <a href="#">Главная</a>
-          <a href="blank.html">Компания</a>
-          <a href="catalog.html">Каталог</a>
-          <a href="blank.html">Новости</a>
-          <a href="blank.html">Спецпредложения</a>
-          <a href="blank.html">Доставка</a>
-          <a href="blank.html">Контакты</a>
+        <nav>
+          <ul class="main-navigation">
+            <li><a href="#">Главная</a></li>
+            <li><a href="blank.html">Компания</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="blank.html">Новости</a></li>
+            <li><a href="blank.html">Спецпредложения</a></li>
+            <li><a href="blank.html">Доставка</a></li>
+            <li><a href="blank.html">Контакты</a></li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -72,7 +76,6 @@
             <li class="materials">
               <h3>Материалы</h3>
               <a class="button block" href="blank.html">На любой вкус</a>
-              <span class="new-chaplet">New</span>
             </li>
             <li class="tools">
               <h3>Инструмент</h3>
@@ -128,6 +131,10 @@
               <p class="old-price">32500 р.</p>
               <p class="actual-price">25500 р.</p>
               <img src="img/products/bosch/bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+              <div class="buy-or-bookmarks">
+                <a class="button buy" href="blank.html">Купить</a>
+                <a class="button bookmarks" href="blank.html">В закладки</a>
+              </div>
             </li>
             <li>
               <h4>Перфоратор BOSCH BFG 3000</h4>
@@ -148,10 +155,7 @@
               <p class="actual-price">12500 р.</p>
             </li>
           </ul>
-          <div class="buy-or-bookmarks">
-            <a class="button buy" href="blank.html">Купить</a>
-            <a class="button bookmarks" href="blank.html">В закладки</a>
-          </div>
+
         </section>
 
         <section class="popular-producers">
@@ -247,8 +251,8 @@
           <h3 class="headliner">Контакты</h3>
           <p>Вы можете забрать товар сами,
             заехав в наш офис:</p>
-          <a href="blank.html"><img src="img/map.png" width="300" height="158" alt="Карта"></a>
-          <div><a class="button" href="mailto:#">Заблудились? Напишите нам!</a></div>
+          <div class="map"><a  href="blank.html"><img src="img/map.png" width="300" height="158" alt="Карта"></a></div>
+          <a class="button" href="mailto:#">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </main>

@@ -137,6 +137,8 @@ ul {
   list-style: none;
 }
 
+/* Прим. для всех страниц */
+
 .hide {
   position: absolute;
   width: 1px;
@@ -207,14 +209,6 @@ ul {
   text-transform: uppercase;
 }
 
-.new-chaplet {
-  text-transform: uppercase;
-  background-color: var(--basic-red);
-  color: var(--basic-white);
-  font-size: 14px;
-  line-height: 18px;
-}
-
 /* header */
 /* header - полоса с поиском */
 
@@ -278,29 +272,29 @@ ul {
   opacity: 0.5;
 }
 
-.search-field::before {
-  content: "";
-  position: absolute;
+.search-field input[type="submit"] {
   width: 17px;
   height: 17px;
+  border: none;
+  background-color: transparent;
+  background: url(../img/icons/search.svg) no-repeat 50% 50%;
+  position: absolute;
   top: 12px;
   left: 17px;
-  background-image: url("../img/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  cursor: pointer;
   opacity: 0.3;
 }
 
-.search-field:hover::before {
+.search-field input[type="submit"]:hover {
   opacity: 1;
 }
 
-.search-field:active::before {
+.search-field input[type="submit"]:active {
   opacity: 0.3;
 }
 
-.search-field:focus::before {
-  fill: var(--basic-red);
+.search-field input[type="submit"]:focus {
+  background-image: url("../img/icons/search-red.svg");
 }
 
 .bookmarks {
@@ -371,8 +365,10 @@ ul {
   align-items: center;
 }
 
-.header-info {
+.sub-section-header p {
+  font-family: "Cuprum", Arial, sans-serif;
   font-style: italic;
+  font-weight: 400;
   color: var(--basic-red);
   font-size: 16px;
   line-height: 23px;
@@ -416,26 +412,25 @@ ul {
   align-self: flex-start;
 }
 
-.our-client {
+.account-hidden {
   display: none;
 }
 
-.sign-in,
-.registration,
-.client-name {
+.login,
+.registration {
   background-color: var(--basic-white);
   color: var(--basic-black);
   font-size: 21px;
   line-height: 21px;
 }
 
-.sign-in {
+.login {
   padding: 12px 27px 12px 45px;
   margin-right: 10px;
   position: relative;
 }
 
-.sign-in::before {
+.login::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -447,23 +442,48 @@ ul {
   background-position: 0 0;
 }
 
-.sign-in::before {
-  fill: var(--login-hover);
+.login:hover::before {
+  background-image: url("../img/icons/login-blue.svg");
+}
+
+.login:active::before {
+  background-image: url("../img/icons/login.svg");
 }
 
 .registration {
   padding: 12px 24px;
 }
 
-.sign-in:hover,
+.login:hover,
 .registration:hover {
   color: var(--basic-red);
 }
 
-.sign-in:active,
-.registration:active,
-.client-name:active {
+.login:active,
+.registration:active {
   color: var(--basic-graylight);
+}
+
+.client-name {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  font-size: 21px;
+  line-height: 21px;
+  position: relative;
+  min-width: 200px;
+  padding: 12px 57px 12px 56px;
+}
+
+.client-name::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 18px;
+  top: 13px;
+  left: 15px;
+  background-image: url("../img/icons/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .client-name:hover {
@@ -495,6 +515,7 @@ ul {
   justify-content: space-between;
   margin-bottom: 60px;
   margin-top: 40px;
+  min-height: 60px;
 }
 
 .main-navigation a {
@@ -549,6 +570,24 @@ ul {
   background-image: url(../img/icons/icon-1.svg);
   background-size: 44px 65px;
   position: relative;
+}
+
+.materials::after {
+  content: "new";
+  position: absolute;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100px;
+  max-height: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  transform: rotate(45deg);
+  top: 8px;
+  right: -26px;
 }
 
 .tools {
@@ -643,6 +682,7 @@ ul {
   border: none;
   background-color: transparent;
   bottom: 104px;
+  cursor: pointer;
 }
 
 .slidebutton.turn-left {
@@ -687,6 +727,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .popular-products-items li:nth-child(4n) {
@@ -694,12 +735,28 @@ ul {
 }
 
 .popular-products-items li:hover {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popular-products-items li:hover img {
+  transform: scale(0);
+  transition:
+    opacity 0.1s ease-in-out,
+    transform 0.1s ease-in-out;
+}
+
+.popular-products-items li:hover .buy-or-bookmarks {
+  z-index: 1;
 }
 
 .popular-products-items img {
   order: -1;
   margin: auto;
+}
+
+.buy-or-bookmarks {
+  z-index: -1;
+  position: absolute;
 }
 
 .popular-products-items h4 {
@@ -727,10 +784,6 @@ ul {
   border-radius: 3px;
   text-align: center;
   padding-top: 10px;
-}
-
-.buy-or-bookmarks {
-  display: none;
 }
 
 /* Главная - секция Популярные производители*/
@@ -932,7 +985,7 @@ ul {
 }
 
 .about-us {
-  flex-grow: 1;
+  flex-basis: 640px;
 }
 
 .about-us p {
@@ -941,6 +994,8 @@ ul {
 
 .cargo-delivery {
   padding-bottom: 20px;
+  padding-left: 27px;
+  list-style-image: url(../img/icons/Layer-cargo.svg);
 }
 
 .about-us .button {
@@ -953,6 +1008,10 @@ ul {
 
 .about-location p {
   max-width: 180px;
+}
+
+.map {
+  margin-bottom: 25px;
 }
 
 .about-location .button {
@@ -1126,9 +1185,11 @@ ul {
   border-color: var(--basic-red);
 }
 
+/* Каталог - секция Пара слов */
+
 .info-note {
   background-color: var(--text-light-one);
-  text-transform: none;
+  color: var(--basic-black);
   font-size: 13px;
   line-height: 24px;
   padding-top: 64px;
@@ -1137,8 +1198,9 @@ ul {
 }
 
 .info-note h2 {
-  font-family: "Cuprum", "Arial", sans-serif;
-  text-transform: uppercase;
+  margin: 0;
+  color: var(--basic-black);
+  font-weight: 400;
 }
 
 /* footer */
@@ -1178,6 +1240,7 @@ ul {
 
 .first-footer-nav ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-content: center;
@@ -1187,6 +1250,7 @@ ul {
 
 .second-footer-nav ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-content: center;
@@ -1240,6 +1304,7 @@ ul {
 
 .social-club ul {
   display: flex;
+  flex-wrap: wrap;
   width: 134px;
   justify-content: space-between;
   margin-left: 161px;
