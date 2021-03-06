@@ -168,40 +168,6 @@ ul {
   background-color: var(--click-red);
 }
 
-.button.buy {
-  background-color: var(--basic-green);
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.button.buy:hover {
-  background-color: var(--preclick-green);
-}
-
-.button.buy:active {
-  background-color: var(--click-green);
-}
-
-.button.bookmarks {
-  background-color: var(--basic-white);
-  color: var(--basic-darkblue);
-  border: 3px solid var(--basic-green);
-  border-radius: 2px;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.button.bookmarks:hover {
-  color: var(--basic-darkblue);
-  border: 3px solid var(--basic-darkblue);
-}
-
-.button.bookmarks:active {
-  color: var(--basic-darkblue);
-  border: 3px solid var(--basic-darkblue);
-  opacity: 0.5;
-}
-
 .headliner {
   color: var(--basic-darkblue);
   font-size: 30px;
@@ -409,7 +375,7 @@ ul {
 
 .unknown-user {
   display: flex;
-  align-self: flex-start;
+  transform: translateY(-15px);
 }
 
 .account-hidden {
@@ -570,6 +536,7 @@ ul {
   background-image: url(../img/icons/icon-1.svg);
   background-size: 44px 65px;
   position: relative;
+  overflow: hidden;
 }
 
 .materials::after {
@@ -728,6 +695,7 @@ ul {
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .popular-products-items li:nth-child(4n) {
@@ -752,11 +720,72 @@ ul {
 .popular-products-items img {
   order: -1;
   margin: auto;
+  border: 20px solid var(--basic-white);
 }
 
 .buy-or-bookmarks {
-  z-index: -1;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
   position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  top: 38px;
+  justify-content: center;
+  z-index: -1;
+}
+
+.button.buy {
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px #367315;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  position: relative;
+  flex-basis: 135px;
+  padding: 10px;
+  text-align: center;
+}
+
+.button.buy::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  left: 30px;
+  background-image: url("../img/icons/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.button.buy:hover {
+  background-color: var(--preclick-green);
+}
+
+.button.buy:active {
+  background-color: var(--click-green);
+}
+
+.button.bookmarks {
+  background-color: var(--basic-white);
+  color: var(--basic-darkblue);
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+  text-align: center;
+  padding-top: 8px;
+  flex-basis: auto;
+}
+
+.button.bookmarks:hover {
+  color: var(--basic-darkblue);
+  border: 3px solid var(--basic-darkblue);
+}
+
+.button.bookmarks:active {
+  color: var(--basic-darkblue);
+  border: 3px solid var(--basic-darkblue);
+  opacity: 0.5;
 }
 
 .popular-products-items h4 {
@@ -771,6 +800,7 @@ ul {
   text-decoration: line-through;
   font-size: 17px;
   line-height: 18px;
+  margin-bottom: 0;
 }
 
 .actual-price {
@@ -778,12 +808,20 @@ ul {
   background-color: var(--basic-red);
   text-transform: uppercase;
   font-size: 17px;
-  line-height: 18px;
-  width: 141px;
-  height: 38px;
-  border-radius: 3px;
-  text-align: center;
-  padding-top: 10px;
+  border-radius: 3px 0 0 3px;
+  position: relative;
+  align-self: flex-start;
+  margin-left: 45px;
+  padding: 10px 25px 10px 32px;
+}
+
+.actual-price::after {
+  content: '';
+  position: absolute;
+  right: -44px;
+  bottom: 0px;
+  border: 22px solid transparent;
+  border-left: 22px solid var(--basic-red);
 }
 
 /* Главная - секция Популярные производители*/
@@ -881,7 +919,7 @@ ul {
 }
 
 .services-division h2,
-.services-submenu h3 {
+.services-items h3 {
   font-weight: 400;
   color: var(--basic-black);
   margin: 0;
@@ -902,6 +940,12 @@ ul {
   margin-top: 21px;
   min-height: 280px;
   padding: 0;
+}
+
+.services-menu {
+  position: relative;
+  padding: 49px 0 45px 0;
+  box-shadow: inset -30px 0 30px -30px var(--basic-gray);
 }
 
 .services-menu li {
@@ -932,10 +976,12 @@ ul {
 .services-items {
   width: 100%;
   margin-left: 80px;
+  padding: 49px 0 45px 0;
 }
 
 .services-items p {
   max-width: 275px;
+  min-height: 100px;
   padding-right: 25px;
   margin-top: 30px;
 }
@@ -994,8 +1040,23 @@ ul {
 
 .cargo-delivery {
   padding-bottom: 20px;
+  position: relative;
+}
+
+.cargo-delivery li {
   padding-left: 27px;
-  list-style-image: url(../img/icons/Layer-cargo.svg);
+}
+
+.cargo-delivery li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  left: 0px;
+  top: 12px;;
+  background-image: url(../img/icons/Layer-cargo.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .about-us .button {
