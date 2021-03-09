@@ -16,7 +16,7 @@
 
   <body>
 
-<!-- Header -->
+    <!-- Header -->
     <header class="main-header">
       <section class="main-header-bar">
         <div class="main-section-header container">
@@ -44,10 +44,19 @@
             <a class="registration" href="blank.html">Регистрация</a>
           </div>
           <div class="account-hidden">
-            <a class="client-name" href="blank.html">Равшан Джамшутович</a>
-            <a href="blank.html">Выйти</a>
-            <a class="client-options" href="blank.html">Мои заказы</a>
-            <a class="client-options" href="blank.html">Личный кабинет</a>
+            <div class="our-client">
+              <a class="client-name" href="blank.html">Равшан Джамшутович</a>
+              <a class="logout" href="blank.html">
+                <svg width="20" height="17" viewBox="0 0 20 17"  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z"/>
+                  <path d="M2.10604 13.952V3.048C2.12404 2.672 2.27704 1.991 3.11604 1.991H8.14304V0H3.11604C0.938036 0 0.112036 1.81 0.0870361 3.027V13.973C0.112036 15.189 0.938036 17 3.11604 17H8.14304V15.01H3.11604C2.27704 15.01 2.12404 14.327 2.10604 13.952Z"/>
+                </svg>
+              </a>
+            </div>
+            <div class="client-options">
+              <a href="blank.html">Мои заказы</a>
+              <a href="blank.html">Личный кабинет</a>
+            </div>
           </div>
         </div>
       </section>
@@ -66,14 +75,14 @@
       </div>
     </header>
 
-<!-- Main -->
+    <!-- Main -->
     <main>
       <h1 class="hide">Интернет-магазин инструмента и стройматериалов «Техномарт»</h1>
       <div class="container">
         <section class="products-promotions">
           <h2 class="hide">Товары и акции</h2>
           <ul class="assortment block">
-            <li class="materials">
+            <li class="materials novetly">
               <h3>Материалы</h3>
               <a class="button block" href="blank.html">На любой вкус</a>
             </li>
@@ -104,7 +113,7 @@
                   <p>Соседям на радость!</p>
                 </li>
               </ul>
-              <a class="button" href="blank.html">Открыть каталог</a>
+              <a class="button" href="catalog.html">Открыть каталог</a>
               <button class="slidebutton turn-left" type="button" aria-label="Предыдущий слайд">
                 <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.9244 0.941406L21.9226 2.98921L4.90699 20.436L21.978 37.9375L19.9789 39.9853L0.910645 20.436L19.9244 0.941406Z" fill="white"/>
@@ -125,7 +134,7 @@
             <p class="headliner">Популярные товары:</p>
             <a class="button" href="blank.html">Все популярные товары</a>
           </div>
-          <ul class="popular-products-items">
+          <ul class="product-card popular-products-items">
             <li>
               <h4>Перфоратор BOSCH BFG 9000</h4>
               <p class="old-price">32500 р.</p>
@@ -269,7 +278,7 @@
       </section>
     </main>
 
-<!-- footer -->
+    <!-- footer -->
     <footer>
       <section class="main-footer-bar">
         <div class="main-footer container">

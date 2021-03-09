@@ -219,7 +219,8 @@ ul {
   background-color: var(--basic-topblue);
   color: var(--basic-white);
   border: none;
-  width: 271px;
+  flex-grow: 1;
+  width: 265px;
   height: 42px;
   padding-left: 42px;
 }
@@ -266,11 +267,17 @@ ul {
 .bookmarks {
   padding: 9px 24px 9px 43px;
   position: relative;
+  justify-content: flex-end;
 }
 
 .basket {
   padding: 9px 26px 9px 49px;
   position: relative;
+  justify-content: flex-end;
+}
+
+.basket.purchases {
+  background-color: var(--basic-red);
 }
 
 .bookmarks:active,
@@ -313,6 +320,7 @@ ul {
 .get-order {
   background-color: var(--basic-green);
   padding: 9px 16px 9px 19px;
+  justify-content: flex-end;
 }
 
 .get-order:hover {
@@ -328,7 +336,6 @@ ul {
 .sub-section-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .sub-section-header p {
@@ -339,8 +346,12 @@ ul {
   font-size: 16px;
   line-height: 23px;
   width: 197px;
-  min-height: 70px;
+  margin: 0;
   margin-left: 30px;
+}
+
+.header-contacts {
+  padding-top: 7px;
 }
 
 .header-tel {
@@ -370,12 +381,16 @@ ul {
   font-style: normal;
   font-size: 14px;
   text-align: center;
-  margin-top: 11px;
+  margin-top: 9px;
+}
+
+.account-area {
+  max-width: 300px;
+  align-self: flex-start;
 }
 
 .unknown-user {
   display: flex;
-  transform: translateY(-15px);
 }
 
 .account-hidden {
@@ -430,14 +445,17 @@ ul {
   color: var(--basic-graylight);
 }
 
+.our-client {
+  display: flex;
+}
+
 .client-name {
   background-color: var(--basic-white);
   color: var(--basic-black);
   font-size: 21px;
-  line-height: 21px;
   position: relative;
   min-width: 200px;
-  padding: 12px 57px 12px 56px;
+  padding: 12px 0 12px 56px;
 }
 
 .client-name::before {
@@ -452,22 +470,60 @@ ul {
   background-position: 0 0;
 }
 
-.client-name:hover {
-  color: var(--basic-black);
+.client-name:hover::before {
+  background-image: url("../img/icons/user-hover.svg");
+}
+
+.client-name:active {
+  color: var(--basic-graylight);
+}
+
+.logout {
+  background-color: var(--basic-white);
+  padding-top: 14px;
+  padding-right: 17px;
+  fill: var(--basic-graylight);
+}
+
+.logout:hover {
+  fill: var(--login-hover);
+}
+
+.logout:active {
+  fill: var(--basic-graylight);
 }
 
 .client-options {
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--basic-darkblue);
+  text-align: center;
 }
 
-.client-options:hover {
+.client-options a {
+  font-size: 16px;
+  color: var(--basic-darkblue);
+  position: relative;
+}
+
+.client-options a:hover {
   color: var(--basic-red);
 }
 
-.client-options:active {
+.client-options a:active {
   color: var(--basic-graylight);
+}
+
+.client-options a:first-child {
+  margin-right: 30px;
+}
+
+.client-options a:first-child::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  right: -20px;
+  bottom: 6px;
+  background-color: var(--basic-darkblue);
+  border-radius: 50%;
 }
 
 /* header - полоса навигации */
@@ -515,10 +571,12 @@ ul {
   grid-template-rows: 123px 123px 123px;
 }
 
-.block.assortment li {
+.assortment.block li {
   padding: 20px 0 21px 22px;
   background-repeat: no-repeat;
   background-position: 85% 50%;
+  overflow: hidden;
+  position: relative;
 }
 
 .block h3{
@@ -535,11 +593,9 @@ ul {
   grid-area: mater;
   background-image: url(../img/icons/icon-1.svg);
   background-size: 44px 65px;
-  position: relative;
-  overflow: hidden;
 }
 
-.materials::after {
+.assortment.block li.novetly::after {
   content: "new";
   position: absolute;
   color: var(--basic-white);
@@ -610,19 +666,7 @@ ul {
   background-repeat: no-repeat;
   background-position: 0 0;
   position: relative;
-}
-
-.promo-slider h3 {
-  font-size: 36px;
-  line-height: 36px;
-  position: absolute;
-  top: 23px;
-  left: 24px;
-}
-
-.promo-slider p {
-  position: absolute;
-  left: 24px;
+  padding: 0;
 }
 
 .slide-perfs {
@@ -635,6 +679,15 @@ ul {
 
 .slide {
   display: none;
+}
+
+.promo-slider h3 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.promo-slider p {
+  margin: 0;
 }
 
 .promo-slider a {
@@ -682,7 +735,7 @@ ul {
   margin-bottom: 70px;
 }
 
-.popular-products-items li {
+.product-card li {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   border: 1px solid var(--border-gray);
@@ -702,22 +755,22 @@ ul {
   margin-right: 0;
 }
 
-.popular-products-items li:hover {
+.product-card li:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.popular-products-items li:hover img {
+.product-card li:hover img {
   transform: scale(0);
   transition:
     opacity 0.1s ease-in-out,
     transform 0.1s ease-in-out;
 }
 
-.popular-products-items li:hover .buy-or-bookmarks {
+.product-card li:hover .buy-or-bookmarks {
   z-index: 1;
 }
 
-.popular-products-items img {
+.product-card img {
   order: -1;
   margin: auto;
   border: 20px solid var(--basic-white);
@@ -788,7 +841,7 @@ ul {
   opacity: 0.5;
 }
 
-.popular-products-items h4 {
+.product-card h4 {
   max-width: 185px;
   text-align: center;
   margin: 0;
@@ -803,6 +856,10 @@ ul {
   margin-bottom: 0;
 }
 
+.old-price.noneprice {
+  opacity: 0;
+}
+
 .actual-price {
   color: var(--basic-white);
   background-color: var(--basic-red);
@@ -812,16 +869,10 @@ ul {
   position: relative;
   align-self: flex-start;
   margin-left: 45px;
-  padding: 10px 25px 10px 32px;
-}
-
-.actual-price::after {
-  content: '';
-  position: absolute;
-  right: -44px;
-  bottom: 0px;
-  border: 22px solid transparent;
-  border-left: 22px solid var(--basic-red);
+  padding: 10px 65px 10px 32px;
+  background-image:
+  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
+  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
 }
 
 /* Главная - секция Популярные производители*/
@@ -945,7 +996,18 @@ ul {
 .services-menu {
   position: relative;
   padding: 49px 0 45px 0;
-  box-shadow: inset -30px 0 30px -30px var(--basic-gray);
+}
+
+.services-menu::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  top: 0px;
+  right: 0px;
+  background-image: url("../img/layer-shadow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .services-menu li {
@@ -1040,20 +1102,20 @@ ul {
 
 .cargo-delivery {
   padding-bottom: 20px;
-  position: relative;
 }
 
 .cargo-delivery li {
   padding-left: 27px;
+  position: relative;
 }
 
 .cargo-delivery li::before {
   content: "";
   position: absolute;
-  width: 25px;
+  width: 20px;
   height: 2px;
   left: 0px;
-  top: 12px;;
+  top: 11px;;
   background-image: url(../img/icons/Layer-cargo.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1079,13 +1141,41 @@ ul {
   padding: 11px 61px 9px 62px;
 }
 
-/* Catalog */
+/* Каталог */
+/* Каталог - хлебные крошки и заголовок*/
 
-.bread-crumbs li {
-  display: inline-block;
+.breadcrumbs {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.bread-crumbs a {
+.breadcrumbs li {
+  display: inline-block;
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs li:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  top: 6px;
+  right: -27px;
+  background-image: url(../img/icons/right-small.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-current::after {
+  display: none;
+}
+
+.breadcrumbs a {
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
@@ -1096,7 +1186,11 @@ ul {
   font-family: "Cuprum", "Arial", sans-serif;
   background-color: var(--section-lightblue);
   color: var(--basic-darkblue);
+  font-weight: 400;
+  padding: 29px;
 }
+
+/* Каталог - сетка страницы */
 
 .catalog-page {
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1109,6 +1203,8 @@ ul {
   gap: 20px;
 }
 
+/* Каталог - фильтры */
+
 .products-filter {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
@@ -1119,22 +1215,84 @@ ul {
   margin: 0;
   margin-bottom: 25px;
   border: none;
+  margin-top: 18px;
 }
 
-.producer-filter ul,
-.power-filter ul {
-  line-height: 18px;
-}
-
-.products-filter p,
-.price-filter input {
+.filter-bar {
   background-color: var(--filter-beige);
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  padding: 10px 0 10px 20px;
+  margin-bottom: 14px;
+}
+
+.range-controls {
+  height: 41px;
+  background-color: var(--filter-beige);
+  padding-top: 39px;
+  border-radius: 3px;
+  margin-top: 11px;
+  margin-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls input {
+  background-color: var(--filter-beige);
+  color: var(--basic-black);
+  border: none;
+  font-size: 17px;
+  text-align: center;
+  width: 95px;
+  height: 38px;
+  border-radius: 3px;
+}
+
+.price-controls input::placeholder {
+  color: var(--basic-black);
 }
 
 .producer-filter li,
 .power-filter li {
   font-size: 15px;
   line-height: 19px;
+  padding-left: 35px;
+  margin-top: 21px;
 }
 
 .filter-name {
@@ -1142,6 +1300,95 @@ ul {
   font-size: 17px;
   line-height: 30px;
 }
+
+.products-filter label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-gorline {
+  border: none;
+  color: var(--basic-graylight);
+  background-color: var(--basic-graylight);
+  height: 1px;
+}
+
+/* Каталог - фильтры - чекбоксы */
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  bottom: -2px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/icons/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:hover + label::before {
+  background-image: url(../img/icons/checkbox-off-hover.svg);
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  bottom: -2px;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/icons/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked:hover + label::before {
+  background-image: url(../img/icons/checkbox-on-hover.svg);
+}
+
+/* Каталог - фильтры - радиокнопки */
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  bottom: -2px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icons/radio-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:hover + label::before {
+  background-image: url(../img/icons/radio-off-hover.svg);
+}
+
+.filter-input-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  bottom: -2px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/icons/radio-on.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:checked:hover + label::before {
+  background-image: url(../img/icons/radio-on-hover.svg);
+}
+
+.producer-filter li:disabled,
+.power-filter li:disabled {
+  opacity: 0.4;
+}
+
+/* Каталог - сортировка */
 
 .products-sorting {
   font-size: 13px;
@@ -1151,82 +1398,90 @@ ul {
   grid-row: 1 / 2;
 }
 
-.products-sorting ul {
+.sorting-items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 10px 16px 10px 240px;
+  position: relative;
 }
 
-.products-sorting a {
+.sorting-items::before {
+  content: "Сортировка:";
+  position: absolute;
+  left: 20px;
+}
+
+.sorting-items a {
   color: var(--basic-black);
   opacity: 0.3;
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-color: var(--basic-red);
+  text-decoration: underline dashed var(--basic-red);
 }
 
-.products-sorting a:hover {
-  color: var(--basic-black);
+.sorting-items a:hover {
   opacity: 1;
-  text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-color: var(--basic-red);
 }
 
-.products-sorting a:active {
+.sorting-current a {
   color: var(--basic-red);
-  opacity: 1;
   text-decoration: none;
+  opacity: 1;
 }
+
+.sort-up {
+  transform: rotate(180deg);
+}
+
+.sort-arrow-current {
+  fill: var(--basic-red);
+}
+
+/* Каталог - карточки товаров
+   стили описаны, class="product-card" */
 
 .perforators-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.perforators-list li {
-  border: 1px solid var(--border-gray);
-  box-sizing: border-box;
-  min-height: 318px;
-  width: 220px;
-  margin-right: 20px;
-  margin-bottom: 18px;
-}
-
 .perforators-list li:nth-child(3n) {
   margin-right: 0;
 }
 
-.producer-filter li:disabled,
-.power-filter li:disabled {
-  opacity: 0.4;
+.perforators-list li {
+  position: relative;
 }
 
-.pages-navigation {
-  grid-column: 2 / -1;
+.perforators-list li.novetly:after {
+  content: "new";
+  position: absolute;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100px;
+  max-height: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  transform: rotate(45deg);
+  top: 8px;
+  right: -26px;
 }
 
-.pages-navigation li {
-  display: inline-block;
+/* Каталог - постраничная навигация и кнопка фильтра*/
+
+.pagination {
+  display: flex;
+  margin-left: 240px;
+  margin-top: 48px;
 }
 
-/* Чекбоксы и Радиокнопки */
-
-.producer-filter img,
-.power-filter img {
-  color: var(--basic-graylight);
-}
-
-.producer-filter img:hover,
-.power-filter img:hover,
-.producer-filter img:disabled,
-.power-filter img:disabled {
-  color: var(--radio-hover-gray);
-}
-
-/* - - - - - - - - - - - */
-
-.catalog-button {
+.pagination-button, .filter-button {
   border: 1px solid var(--border-button-gray);
   border-radius: 2px;
   background-color: var(--basic-white);
@@ -1236,13 +1491,30 @@ ul {
   text-transform: uppercase;
   font-size: 13px;
   line-height: 18px;
+  padding: 10px 15px;
+  display: block;
+  margin-right: 10px;
 }
 
-.catalog-button:hover {
+.filter-button {
+  cursor: pointer;
+  width: 220px;
+}
+
+.pagination:last-child {
+  margin-right: 0;
+}
+
+.pb-current {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.pagination-button:hover, .filter-button:hover {
   border-color: var(--basic-graylight);
 }
 
-.catalog-button:active {
+.pagination-button:active, .filter-button:active {
   border-color: var(--basic-red);
 }
 
