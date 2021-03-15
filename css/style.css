@@ -233,9 +233,12 @@ ul {
   padding-left: 42px;
 }
 
-.search-field input[type="search"]:focus {
+.search-field input[type="search"]:focus  {
   background-color: var(--basic-white);
   color: var(--basic-black);
+  background-image: url("../img/icons/search-red.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 13px;
 }
 
 .search-field input[type="search"]::placeholder {
@@ -273,13 +276,13 @@ ul {
 }
 
 .bookmarks {
-  padding: 9px 24px 9px 43px;
+  padding: 9px 24px 9px 47px;
   position: relative;
   justify-content: flex-end;
 }
 
 .basket {
-  padding: 9px 26px 9px 49px;
+  padding: 9px 28px 9px 49px;
   position: relative;
   justify-content: flex-end;
 }
@@ -300,7 +303,7 @@ ul {
   width: 14px;
   height: 16px;
   top: 13px;
-  left: 20px;
+  left: 25px;
   background-image: url("../img/icons/bookmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -313,7 +316,7 @@ ul {
   width: 15px;
   height: 15px;
   top: 13px;
-  left: 26px;
+  left: 27px;
   background-image: url("../img/icons/cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -353,13 +356,15 @@ ul {
   color: var(--basic-red);
   font-size: 16px;
   line-height: 23px;
-  width: 197px;
+  width: 200px;
   margin: 0;
+  padding: 0;
   margin-left: 30px;
 }
 
 .header-contacts {
-  padding-top: 7px;
+  margin-top: 7px;
+  margin-left: 15px;
 }
 
 .header-tel {
@@ -389,7 +394,8 @@ ul {
   font-style: normal;
   font-size: 14px;
   text-align: center;
-  margin-top: 9px;
+  margin-top: 10px;
+  max-width: 270px;
 }
 
 .account-area {
@@ -553,6 +559,14 @@ ul {
   display: block;
 }
 
+.main-navigation li:first-child {
+  margin-left: 27px;
+}
+
+.main-navigation li:last-child {
+  margin-right: 27px;
+}
+
 .main-navigation a:hover {
   background-color: var(--basic-topblue);
 }
@@ -565,8 +579,7 @@ ul {
 /* Главная - секция Товары и Акции */
 
 .products-promotions {
-  margin-top: 59px;
-  margin-bottom: 59px;
+  margin-top: 60px;
 }
 
 .block.assortment {
@@ -581,7 +594,7 @@ ul {
 }
 
 .assortment.block li {
-  padding: 20px 0 21px 22px;
+  padding: 20px;
   background-repeat: no-repeat;
   background-position: 85% 50%;
   overflow: hidden;
@@ -692,11 +705,13 @@ ul {
 
 .promo-slider h3 {
   font-size: 36px;
-  margin: 0;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 
 .promo-slider p {
-  margin: 0;
+  margin-left: -14px;
 }
 
 .promo-slider a {
@@ -710,16 +725,16 @@ ul {
   position: absolute;
   border: none;
   background-color: transparent;
-  bottom: 104px;
+  bottom: 100px;
   cursor: pointer;
 }
 
 .slidebutton.turn-left {
-  left: 25px;
+  left: 15px;
 }
 
 .slidebutton.turn-right {
-  right: 25px;
+  right: 15px;
 }
 
 /* Главная - секция Популярные товары */
@@ -801,7 +816,8 @@ ul {
 .product-card img {
   order: -1;
   margin: auto;
-  border: 20px solid var(--basic-white);
+  border-left: 20px solid var(--basic-white);
+  border-right: 20px solid var(--basic-white);
   object-fit: contain;
 }
 
@@ -874,6 +890,7 @@ ul {
   max-width: 185px;
   text-align: center;
   margin: 0;
+  margin-top: 10px;
 }
 
 .old-price {
@@ -882,7 +899,8 @@ ul {
   text-decoration: line-through;
   font-size: 17px;
   line-height: 18px;
-  margin-bottom: 0;
+  margin: 0;
+  margin-top: 5px;
 }
 
 .old-price.noneprice {
@@ -895,13 +913,11 @@ ul {
   text-transform: uppercase;
   font-size: 17px;
   border-radius: 3px 0 0 3px;
-  position: relative;
-  align-self: flex-start;
-  margin-left: 45px;
   padding: 10px 65px 10px 32px;
+  margin: 10px 0 20px 30px;
   background-image:
-  linear-gradient(225deg, var(--basic-white) 25%, transparent 25%),
-  linear-gradient(315deg, var(--basic-white) 25%, transparent 25%);
+  linear-gradient(225deg, var(--basic-white) 20%, transparent 20%),
+  linear-gradient(315deg, var(--basic-white) 20%, transparent 20%);
 }
 
 /* Главная - секция Популярные производители*/
@@ -911,7 +927,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .producers-band p {
@@ -931,7 +946,7 @@ ul {
 
 .producers-blocks li {
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .producers-blocks li:nth-child(4n) {
@@ -963,8 +978,6 @@ ul {
 .services-division {
   background-color: var(--section-background);
   margin-bottom: 70px;
-  padding-top: 64px;
-  padding-bottom: 54px;
 }
 
 .services-division h2,
@@ -981,19 +994,26 @@ ul {
   line-height: 24px;
   max-width: 400px;
   min-height: 49px;
+  margin: 0;
+  margin-top: 20px;
 }
 
 .services-area {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin-top: 21px;
-  min-height: 280px;
-  padding: 0;
+}
+
+.services-info {
+  width: inherit;
+  margin-top: 64px;
+  margin-bottom: 65px;
 }
 
 .services-menu {
   position: relative;
-  padding: 49px 0 45px 0;
+  min-height: 280px;
+  padding-top: 10px;
 }
 
 .services-menu::after {
@@ -1001,7 +1021,7 @@ ul {
   position: absolute;
   width: 10px;
   height: 279px;
-  top: 0px;
+  top: -30px;
   right: 0px;
   background-image: url("../img/layer-shadow.png");
   background-repeat: no-repeat;
@@ -1013,7 +1033,7 @@ ul {
   color: var(--basic-white);
   font-size: 21px;
   line-height: 30px;
-  min-width: 240px;
+  width: 240px;
   min-height: 61px;
   box-shadow: inset 0px 1px 0px var(--services-menu-shadow);
 }
@@ -1034,46 +1054,60 @@ ul {
 }
 
 .services-items {
-  width: 100%;
+  width: 620px;
   margin-left: 80px;
-  padding: 49px 0 45px 0;
 }
 
 .services-items p {
   max-width: 275px;
-  min-height: 100px;
-  padding-right: 25px;
   margin-top: 30px;
 }
 
 .services-items li {
   background-repeat: no-repeat;
+  min-height: 280px;
 }
 
 .services-delivery {
   background-image: url(../img/delivery.png);
   background-size: 468px 261px;
-  background-position: 100% 0;
-  height: 100%;
+  background-position: 100% 100%;
 }
 
 .services-guarantee {
   background-image: url(../img/guarantee.png);
   background-size: 389px 283px;
+  background-position: 105% 100%;
   display: none;
+}
+
+.services-guarantee p {
+  max-width: 315px;
+  margin-top: 25px;
 }
 
 .services-credit {
   background-image: url(../img/credit.png);
   background-size: 465px 285px;
+  background-position: 105% 100%;
   display: none;
+}
+
+.services-credit p {
+  max-width: 280px;
+  margin-bottom: 30px;
+}
+
+.services-credit a {
+  padding: 10px 45px 10px 45px;
 }
 
 /* Главная - секция Информация и Контакты */
 
 .contacts-info {
-  margin-bottom: 70px;
+  margin-bottom: 80px;
   display: flex;
+  justify-content: space-between;
 }
 
 .contacts-info h3 {
@@ -1088,10 +1122,11 @@ ul {
   font-size: 13px;
   line-height: 24px;
   margin-top: 24px;
+  margin-bottom: 0;
 }
 
 .about-us {
-  flex-basis: 640px;
+  min-width: 500px;
 }
 
 .about-us p {
@@ -1099,21 +1134,23 @@ ul {
 }
 
 .cargo-delivery {
-  padding-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 26px;
 }
 
 .cargo-delivery li {
-  padding-left: 27px;
+  padding-left: 37px;
+  margin-bottom: 12px;
   position: relative;
 }
 
 .cargo-delivery li::before {
   content: "";
   position: absolute;
-  width: 20px;
+  width: 25px;
   height: 2px;
   left: 0px;
-  top: 11px;;
+  top: 12px;;
   background-image: url(../img/icons/Layer-cargo.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1124,11 +1161,12 @@ ul {
 }
 
 .about-location {
-  flex-basis: 300px;
+  min-width: 300px;
 }
 
 .about-location p {
   max-width: 180px;
+  margin-bottom: 32px;
 }
 
 .map {
@@ -1152,6 +1190,7 @@ ul {
   display: inline-block;
   position: relative;
   margin-right: 40px;
+  vertical-align: middle;
 }
 
 .breadcrumbs li:after {
@@ -1405,6 +1444,7 @@ ul {
 
 .sorting-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 10px 16px 10px 240px;
   position: relative;
@@ -1536,11 +1576,17 @@ ul {
 }
 
 .logo-pic.logo-footer {
-  max-width: 180px;
+  width: 220px;
+  height: 68px;
+}
+
+.logo-pic.logo-footer img {
+  width: 138px;
+  height: 23px;
 }
 
 .logo-pic.logo-footer a {
-  padding: 10px 41px 15px 41px;
+  padding: 20px 41px 25px 41px;
   display: block;
 }
 
@@ -1553,8 +1599,14 @@ ul {
 }
 
 .footer-nav {
+  margin-top: 17px;
   align-self: center;
   flex-grow: 1;
+}
+
+.footer-nav li {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .first-footer-nav ul {
@@ -1614,6 +1666,7 @@ ul {
   min-height: 107px;
   display: flex;
   align-items: center;
+  padding-top: 3px;
 }
 
 .copyright {
@@ -1645,8 +1698,8 @@ ul {
   background-color: var(--basic-red);
 }
 
-.connect-info {
-  flex-grow: 1;
+.connect-info.by {
+  margin-left: 50px;
 }
 
 .connect-info p {
