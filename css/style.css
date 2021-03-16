@@ -357,14 +357,14 @@ ul {
   font-size: 16px;
   line-height: 23px;
   width: 200px;
+  min-height: content;
   margin: 0;
-  padding: 0;
-  margin-left: 30px;
+  padding-left: 30px;
 }
 
 .header-contacts {
-  margin-top: 7px;
-  margin-left: 15px;
+  margin-right: -20px;
+  padding-top: 7px;
 }
 
 .header-tel {
@@ -469,7 +469,7 @@ ul {
   font-size: 21px;
   position: relative;
   min-width: 200px;
-  padding: 12px 0 12px 56px;
+  padding: 12px 4px 12px 56px;
 }
 
 .client-name::before {
@@ -822,29 +822,31 @@ ul {
 }
 
 .buy-or-bookmarks {
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  text-transform: uppercase;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  top: 48px;
+  top: 35px;
   justify-content: center;
   z-index: -1;
 }
 
-.button.buy {
+.button-buy {
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--green-shadow);
   margin-bottom: 10px;
   border-radius: 2px;
   position: relative;
-  flex-basis: 135px;
   padding: 10px;
+  flex-basis: 120px;
   text-align: center;
 }
 
-.button.buy::before {
+.button-buy::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -857,30 +859,30 @@ ul {
   opacity: 0.3;
 }
 
-.button.buy:hover {
+.button-buy:hover {
   background-color: var(--preclick-green);
 }
 
-.button.buy:active {
+.button-buy:active {
   background-color: var(--click-green);
 }
 
-.button.bookmarks {
+.button-bookmarks {
   background-color: var(--basic-white);
   color: var(--basic-darkblue);
   border: 3px solid var(--basic-green);
   border-radius: 2px;
+  padding: 8px;
+  flex-basis: 120px;
   text-align: center;
-  padding-top: 8px;
-  flex-basis: auto;
 }
 
-.button.bookmarks:hover {
+.button-bookmarks:hover {
   color: var(--basic-darkblue);
   border: 3px solid var(--basic-darkblue);
 }
 
-.button.bookmarks:active {
+.button-bookmarks:active {
   color: var(--basic-darkblue);
   border: 3px solid var(--basic-darkblue);
   opacity: 0.5;
@@ -1184,6 +1186,8 @@ ul {
 .breadcrumbs {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .breadcrumbs li {
@@ -1198,8 +1202,8 @@ ul {
   position: absolute;
   width: 8px;
   height: 16px;
-  top: 6px;
-  right: -27px;
+  top: 2px;
+  right: -25px;
   background-image: url(../img/icons/right-small.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1270,8 +1274,8 @@ ul {
   background-color: var(--filter-beige);
   padding-top: 39px;
   border-radius: 3px;
-  margin-top: 11px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 8px;
   padding-right: 20px;
   padding-left: 20px;
   position: relative;
@@ -1336,7 +1340,15 @@ ul {
   font-size: 15px;
   line-height: 19px;
   padding-left: 35px;
-  margin-top: 21px;
+  margin: 0;
+}
+
+.producer-filter li {
+  margin-top: 19px;
+}
+
+.power-filter li {
+  margin-top: 25px;
 }
 
 .filter-name {
@@ -1440,6 +1452,8 @@ ul {
   background-color: var(--filter-beige);
   grid-column: 2 / -1;
   grid-row: 1 / 2;
+  position: relative;
+  margin-bottom: 0;
 }
 
 .sorting-items {
@@ -1447,7 +1461,6 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 10px 16px 10px 240px;
-  position: relative;
 }
 
 .sorting-items::before {
@@ -1491,6 +1504,10 @@ ul {
   flex-wrap: wrap;
 }
 
+.perforators-list li {
+  margin: 10px 20px 10px 0;
+}
+
 .perforators-list li:nth-child(3n) {
   margin-right: 0;
 }
@@ -1500,7 +1517,7 @@ ul {
 .pagination {
   display: flex;
   margin-left: 240px;
-  margin-top: 48px;
+  margin-top: 12px;
 }
 
 .pagination-button, .filter-button {
@@ -1521,6 +1538,7 @@ ul {
 .filter-button {
   cursor: pointer;
   width: 220px;
+  margin-top: 35px;
 }
 
 .pagination:last-child {
@@ -1530,6 +1548,11 @@ ul {
 .pb-current {
   background-color: var(--basic-red);
   color: var(--basic-white);
+}
+
+.pagination-next {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .pagination-button:hover, .filter-button:hover {
@@ -1547,15 +1570,23 @@ ul {
   color: var(--basic-black);
   font-size: 13px;
   line-height: 24px;
-  padding-top: 64px;
-  padding-bottom: 68px;
+  padding-top: 65px;
+  padding-bottom: 55px;
   margin-top: 59px;
 }
 
 .info-note h2 {
   margin: 0;
+  margin-bottom: 25px;
   color: var(--basic-black);
   font-weight: 400;
+}
+
+.info-note p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 /* footer */
@@ -1758,6 +1789,8 @@ ul {
 .modal-mailus {
   width: 620px;
   height: min-content;
+  left: -15px;
+  bottom: 280px;
   display: none;
 }
 
@@ -1823,6 +1856,8 @@ ul {
 .modal-map {
   width: 940px;
   height: 450px;
+  left: -15px;
+  bottom: 280px;
   display: none;
 }
 
@@ -1840,6 +1875,8 @@ ul {
   width: 620px;
   height: min-content;
   text-align: center;
+  left: 30px;
+  bottom: 130px;
   display: none;
 }
 
@@ -1849,7 +1886,7 @@ ul {
   color: var(--basic-black);
   font-size: 24px;
   line-height: 30px;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 50px;
   position: relative;
 }
