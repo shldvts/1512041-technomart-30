@@ -202,7 +202,7 @@ ul {
 .logo-pic a {
   background-color: var(--basic-red);
   color: var(--basic-white);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--card-shadow);
 }
 
 .logo-pic.logo-header a {
@@ -221,19 +221,19 @@ ul {
 
 .search-field {
   position: relative;
+  flex-grow: 1;
 }
 
 .search-field input[type="search"] {
   background-color: var(--basic-topblue);
   color: var(--basic-white);
   border: none;
-  flex-grow: 1;
-  width: 265px;
+  width: 100%;
   height: 42px;
   padding-left: 42px;
 }
 
-.search-field input[type="search"]:focus  {
+.search-field input[type="search"]:focus {
   background-color: var(--basic-white);
   color: var(--basic-black);
   background-image: url("../img/icons/search-red.svg");
@@ -276,15 +276,13 @@ ul {
 }
 
 .bookmarks {
-  padding: 9px 24px 9px 47px;
+  padding: 9px 40px 9px 47px;
   position: relative;
-  justify-content: flex-end;
 }
 
 .basket {
-  padding: 9px 28px 9px 49px;
+  padding: 9px 21px 9px 35px;
   position: relative;
-  justify-content: flex-end;
 }
 
 .basket.purchases {
@@ -316,7 +314,7 @@ ul {
   width: 15px;
   height: 15px;
   top: 13px;
-  left: 27px;
+  left: 10px;
   background-image: url("../img/icons/cart.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -331,7 +329,6 @@ ul {
 .get-order {
   background-color: var(--basic-green);
   padding: 9px 16px 9px 19px;
-  justify-content: flex-end;
 }
 
 .get-order:hover {
@@ -357,7 +354,6 @@ ul {
   font-size: 16px;
   line-height: 23px;
   width: 200px;
-  min-height: content;
   margin: 0;
   padding-left: 30px;
 }
@@ -1213,6 +1209,10 @@ ul {
   margin-right: 0;
 }
 
+.breadcrumbs-current a {
+  cursor: default;
+}
+
 .breadcrumbs-current::after {
   display: none;
 }
@@ -1458,15 +1458,25 @@ ul {
 
 .sorting-items {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 10px 16px 10px 240px;
+  align-items: center;
+  height: 100%;
 }
 
-.sorting-items::before {
-  content: "Сортировка:";
-  position: absolute;
-  left: 20px;
+.sorting-items li:nth-child(1) {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+.sorting-items li:nth-child(2) {
+  margin-right: 70px;
+}
+
+.sorting-items li:nth-child(3) {
+  margin-right: 65px;
+}
+
+.sorting-items li:nth-child(4) {
+  margin-right: 45px;
 }
 
 .sorting-items a {
@@ -1489,6 +1499,11 @@ ul {
 
 .sort-up {
   transform: rotate(180deg);
+  margin-right: 21px;
+}
+
+.sort-down {
+  margin-right: 16px;
 }
 
 .sort-arrow-current a {
