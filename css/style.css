@@ -1371,7 +1371,7 @@ ul {
   height: 1px;
 }
 
-/* Каталог - фильтры - чекбоксы */
+/* Каталог - фильтры - чекбоксы и радиокнопки */
 
 .filter-input-checkbox + label::before {
   content: "";
@@ -1404,8 +1404,6 @@ ul {
 .filter-input-checkbox:checked:hover + label::before {
   background-image: url(../img/icons/checkbox-on-hover.svg);
 }
-
-/* Каталог - фильтры - радиокнопки */
 
 .filter-input-radio + label::before {
   content: "";
@@ -1442,6 +1440,12 @@ ul {
 .producer-filter li:disabled,
 .power-filter li:disabled {
   opacity: 0.4;
+}
+
+.filter-input-checkbox:focus + label,
+.filter-input-radio:focus + label {
+  border: 1px dashed var(--basic-gray);
+  border-radius: 3px;
 }
 
 /* Каталог - сортировка */
