@@ -1149,7 +1149,7 @@ ul {
   height: 2px;
   left: 0px;
   top: 12px;;
-  background-image: url(../img/icons/Layer-cargo.svg);
+  background-image: url(../img/icons/cargo.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1314,7 +1314,12 @@ ul {
   left: 160px;
 }
 
-.price-controls input[type='number'] {
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls input[type="number"] {
   background-color: var(--filter-beige);
   color: var(--basic-black);
   border: none;
@@ -1444,8 +1449,7 @@ ul {
 
 .filter-input-checkbox:focus + label,
 .filter-input-radio:focus + label {
-  border: 1px dashed var(--basic-gray);
-  border-radius: 3px;
+  outline: 1px dashed var(--basic-gray);
 }
 
 /* Каталог - сортировка */

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Техномарт: Каталог</title>
   </head>
 
@@ -24,8 +24,10 @@
             <a href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип компании Техномарт"></a>
           </div>
           <form action="#" class="search-field">
-            <input type="search" name="search" placeholder="Поиск:">
-            <input type="submit" value="">
+            <input type="search" id="search" placeholder="Поиск:">
+            <label class="hide" for="search">Поиск</label>
+            <input type="submit" id="submit-butt" value="">
+            <label class="hide" for="submit-butt">Искать</label>
           </form>
           <a class="bookmarks" href="blank.html">Закладки: 0</a>
           <a class="basket purchases" href="blank.html">Корзина: 10</a>
@@ -97,14 +99,16 @@
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar"></div>
+                    <div class="bar" style="width: 80%; margin-left: 5%"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 5%"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="left: 75%"></div>
                 </div>
                 <div class="price-controls">
-                  <input type="number" name="price" id="price-1" min="0" max="40000" placeholder="0" step="100"> —
+                  <input type="number" name="price" id="price-1" min="0" max="40000" placeholder="0" step="100">
+                  <label class="hide" for="price-1">Минимальная цена</label> —
                   <input type="number" name="price" id="price-2" min="0" max="40000" placeholder="30000" step="100">
+                  <label class="hide" for="price-2">Максимальная цена</label>
                 </div>
               </div>
             </fieldset>
